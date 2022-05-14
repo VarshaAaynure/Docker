@@ -1,6 +1,4 @@
-one
-two
-three
-four
-five
-six
+# Docker commands 
+git config --global user.name
+git config --global user.email
+git config --global user.password 
