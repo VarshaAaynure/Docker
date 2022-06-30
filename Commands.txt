@@ -1,4 +1,6 @@
-# Docker commands 
+# Docker commands to see and set the user Name, Email and Password.
 git config --global user.name
-git config --global user.email
-git config --global user.password 
+git config --global user.name "USER_NAME"
+
+git config --global user.email 
+git config --global user.email "username@gmail.com"
