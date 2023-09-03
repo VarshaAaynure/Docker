@@ -1,0 +1,32 @@
+docker version
+docker images -a
+docker search $image_name
+docker pull $image_name:$version
+docker rmi image $image_id
+docker container run $image_name cat /ect/os-release
+docker container ls -a
+docker container rm $container_id
+#detach
+docker container run -d ubuntu:14.04 sleep 30
+docker container run ubuntu:10.04 sleep 30
+
+#interactive
+docker container run -it ubuntu:10.04 /bin/bash
+
+docker container start 
+docker container stop
+
+docker container inspect $container_id
+docker image inspect $image_name:$version
+docker volume inspect $volume_id
+docker network inspect $network_id
+
+docker container logs $container_id
+# Follow log output ( if you want to see logs continuously)
+docker container logs -f $container_id 
+docker container logs --follow $container_id
+
+docker container restart $container_id
+
+docker container rename $container_id $container_new_name
+docker container rename $container_old_name $container_new_name
