@@ -1,0 +1,7 @@
+## Steps to run docker file
+1. Create folder and it should be named as "Dockerfile" on your VM (not in container)
+2. Then inside this folder copy your "Dockerfile" 
+# Note: your folder should contain only one dokcerfile
+# if not, then we will need to mention dockerfile name
+3. run: docker build -t container-name .
+ or docker build -t $container_id .
