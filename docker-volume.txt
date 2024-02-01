@@ -1,0 +1,3 @@
+docker volume create <volume-name>
+docker volume ls
+docke volume inspect <volume-name>
