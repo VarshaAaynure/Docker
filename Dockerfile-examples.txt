@@ -39,3 +39,35 @@ WORKDIR /opt
 ENTRYPOINT ["python", "app.py"]
 
 CMD ["--color", "red"]
+
+
+controlplane ~/webapp-color-3 ➜  cat Dockerfile 
+FROM python:3.6-alpine
+
+RUN pip install flask
+
+COPY . /opt/
+
+EXPOSE 8080
+
+WORKDIR /opt
+
+ENTRYPOINT ["python", "app.py"]
+
+CMD ["--color", "red"]
+
+controlplane ~/webapp-color-3 ➜  cat webapp-color-pod-2.yaml 
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: webapp-green
+  labels:
+      name: webapp-green 
+spec:
+  containers:
+  - name: simple-webapp
+    image: kodekloud/webapp-color
+    command: ["python", "app.py"]
+    args: ["--color", "pink"]
+
+controlplane ~/webapp-color-3 ➜  
